@@ -1,0 +1,11 @@
+[DATA]------------------------------------
+{"MessageId":"7af4e7ea-1e54-45c1-865a-eff96ea1bbd0","QueueName":"test_queue_consume","ExchangeName":null,"RaoutingKey":null,"MessageBody":"{\r\n  \u0022testId\u0022: 123,\r\n  \u0022testName\u0022: \u0022Test Message\u0022\r\n}","Status":"SUCCESS","ActionStatus":null,"FailedMessage":null,"FailedType":null,"FailedAt":"2026-08-31T10:51:49.4506526Z","ConsumedAt":"2026-08-31T16:21:49.4507072+05:30","IsRedelivered":false}
+[ERROR]------------------------------------
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ConsumedLogModel -> ConsumeLog
+sjam.RabbitMQ.Models.RabbitMQModel.ConsumedLogModel -> sjam.Dal.Entities.ConsumeLog
+   at lambda_method19(Closure, Object, ConsumeLog, ResolutionContext)
+   at sjam.RabbitMQ.Repository.ConsumeLogRepository.InsertNewLog(ConsumedLogModel newConsumeLog) in C:\Users\user\Desktop\Wb_State_Jit\sjam\RabbitMQ\Repository\ConsumeLogRepository.cs:line 22
+   at sjam.RabbitMQ.Common.RabbitMQConsumerBase`1.SuccessProcess(MessageHandlerContext ctx, Boolean isPublish) in C:\Users\user\Desktop\Wb_State_Jit\sjam\RabbitMQ\Common\RabbitMQConsumerBase.cs:line 267
